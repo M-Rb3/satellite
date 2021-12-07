@@ -47,7 +47,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  top: 30%;
+  top: 20%;
 }
 
 form {
@@ -125,7 +125,7 @@ label {
     width: fit-content;
     padding: 3rem 1rem;
     margin: 0 5px;
-    top: 20%;
+    top: 10%;
   }
   .svg-wrapper {
     width: 260x;
@@ -139,7 +139,10 @@ label {
     text-align: center;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
+  .wrap-content {
+    width: 320px;
+  }
 }
 
 @import "./Home.scss";

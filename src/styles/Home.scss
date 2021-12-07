@@ -23,8 +23,8 @@ body {
 
 .svg-wrapper {
   position: relative;
-  width: 560px;
-  height: 560px;
+  width: 360px;
+  height: 360px;
 
   svg {
     position: absolute;
@@ -40,9 +40,15 @@ body {
   }
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media screen and (max-width: 600px) {
   .svg-wrapper {
-    width: 360px;
-    height: 360px;
+    width: 260px;
+    height: 260px;
   }
 }

@@ -9,7 +9,7 @@ const HomePage = () => {
   const [active, setActive] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
-    const B = -1 * earthlon - -1 * satLon;
+    const B = earthlon - satLon;
     let b = Math.acos(
       Math.cos((B * Math.PI) / 180) * Math.cos((earthLat * Math.PI) / 180)
     );
@@ -19,7 +19,13 @@ const HomePage = () => {
       Math.sin(Math.abs((B * Math.PI) / 180)) / Math.sin((b * Math.PI) / 180)
     );
     A = (A * 180) / Math.PI;
-    A = 180 - A;
+    if (B > 0 && earthLat < 0) {
+      A = 360 - A;
+    } else if (B < 0 && earthLat > 0) {
+      A = 180 - A;
+    } else if (B > 0 && earthLat > 0) {
+      A = 180 + A;
+    }
     A = Number(A.toFixed(1));
     setAz(A);
     const aGeo = 42164;
@@ -35,12 +41,13 @@ const HomePage = () => {
   };
   const validtor = (e, set) => {
     const re = /^[0-9\b]+$/;
+    // const re = ^-?[0-9]\d*(\.\d+)?$;
 
     // if value is not blank, then test the regex
 
-    if (e.target.value === "" || re.test(e.target.value)) {
-      set(e.target.value);
-    }
+    // if (e.target.value === "" || re.test(e.target.value)) {
+    set(e.target.value);
+    // }
   };
   return (
     <div class="wrap-content">
@@ -54,7 +61,7 @@ const HomePage = () => {
             <input
               onChange={(e) => validtor(e, setEarthLat)}
               value={earthLat}
-              type="text"
+              type="number"
               required
             />
             <span>Degrees</span>
