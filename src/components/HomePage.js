@@ -59,7 +59,7 @@ const HomePage = () => {
           <label>Earth Station Latitude</label>
           <div className="input-box">
             <input
-              onChange={(e) => validtor(e, setEarthLat)}
+              onChange={(e) => setEarthLat(e.target.value)}
               value={earthLat}
               type="number"
               required
@@ -71,9 +71,9 @@ const HomePage = () => {
           <label>Earth Station Longitude</label>
           <div className="input-box">
             <input
-              onChange={(e) => validtor(e, setEarthlon)}
+              onChange={(e) => setEarthlon(e.target.value)}
               value={earthlon}
-              type="text"
+              type="number"
               required
             />
             <span>Degrees</span>
@@ -83,9 +83,9 @@ const HomePage = () => {
           <label>Satellite Longitude</label>
           <div className="input-box">
             <input
-              onChange={(e) => validtor(e, setsatLon)}
+              onChange={(e) => setsatLon(e.target.value)}
               value={satLon}
-              type="text"
+              type="number"
               required
             />
             <span>Degrees</span>
