@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Satellite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Satellite is a React project for calculating the look angle for a satellite.
 
 ## Available Scripts
 
