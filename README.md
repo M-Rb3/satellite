@@ -4,7 +4,7 @@ Satellite Look Angle Calculator is a React-based project that provides a form to
 
 ## Live Demo
 
-Check out the live demo of the Satellite Look Angle Calculator: [Satellite Look Angle Calculator Live Demo](https://satellite-seven.vercel.app)
+Check out the live demo of the Satellite Look Angle Calculator: [Satellite Look Angle Calculator Live Demo](https://look-cal.web.app/)
 
 ## Features
 
